@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Mitr:wght@700&display=swap');
+
+/* Resets */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+*:focus{
+    outline: none;
+}
+
+
+/* Styles */
+
+body {
+    font-family: 'El Messiri', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#0CCB97, #00969A);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.app {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.app h1 {
+    background: -webkit-linear-gradient(#00969A, #1F6175);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 4rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #2F4858;
+}
+.app h1 div {
+    display: inline-block;
+    transform: rotate(35deg) translate(5px, 5px);
+}
+
+.app button {
+    background: #1F6175;
+    border: 0;
+}
+.app button:hover {
+    cursor: pointer;
+    background: #00969A;
+}
+
+.app .input {
+    position: relative;
+    display: flex;
+    height: 45px;
+    font-size: 1.4rem;
+}
+.app .input input {
+    padding-left: 5px;
+    width: 80%;
+    border: 0;
+}
+.app .input button {
+    color: white;
+
+    flex-grow: 1;
+}
+.app .input button > svg {
+    height: 100%;
+}
+
+.app .input .item-overlay {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    line-height: 200%;
+}
+.app .input .item-overlay .input {
+    padding-left: 5px;
+    width: 80%;
+    height: 100%;
+}
+.app .input .item-overlay .button {
+    color: white;
+    flex-grow: 1;
+    height: 100%;
+}
+.app .input .item-overlay .button > svg {
+    width: 100%;
+    height: 100%;
+    color: red;
+}
+
+
+.app .items {
+
+}
+
+.app .item {
+    display:flex;
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #1F6175;
+}
+.app .item .input {
+    padding-left: 5px;
+    width: 80%;
+    height: 100%;
+    background: #CBFBE6;
+    line-height: 200%;
+}
+.app .item button {
+    color: white;
+    flex-grow: 1;
+    height: 100%;
+}
+.app .item button > svg {
+    width: 60%;
+    height: 60%;
+    color: red;
+}
+
+.item.animation {
+    opacity: 1;
+    animation: new-item-animation 1s linear forwards;
+}
+
+@keyframes new-item-animation {
+    0% {
+        opacity: 1;
+        transform: translateY(-45px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(-45px);
+    }
+    100% {
+        opacity: 1;
+        transform : translateY(0);
+    }
+}
+
+.animation-fadeOut {
+    opacity: 1;
+    animation: fadeOutAnim .3s linear forwards;
+}
+
+@keyframes fadeOutAnim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+
